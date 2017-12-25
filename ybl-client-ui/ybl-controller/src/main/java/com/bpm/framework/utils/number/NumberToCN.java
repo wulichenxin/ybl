@@ -3,7 +3,7 @@ package com.bpm.framework.utils.number;
 import java.math.BigDecimal;
 /**
  * 金额数字(小数点后两位)转汉字大写
- * @author WIN
+ * @author WINchenxin
  *
  */
 public class NumberToCN {
