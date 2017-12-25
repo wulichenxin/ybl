@@ -1,0 +1,349 @@
+.bl-login-btn{
+	border: 1px solid #D0B26B;
+    color: #D0B26B;
+    display: inline-block;
+    line-height: 25px;
+    padding: 0px 22px;
+    border-radius: 18px;
+}
+.color-white{
+	color: white;
+}
+.bl-cont{
+	position: relative;
+	margin-bottom: 300px;
+}
+.bl-cont>img{
+	width: 100%;
+}
+.bl-info{
+	width: 1200px;
+	margin: auto;
+	background: white;
+  box-shadow: 0px 0px 8px #999;
+    border-radius: 11px;
+    height: 360px;
+  padding: 30px;
+  position: absolute;
+  left: 50%;
+  margin-left: -600px;
+  bottom: -226px;
+}
+.blcont-left{
+	padding: 0 88px 20px 40px;
+	border-right: 1px solid #DADADA;
+}
+.grounp{
+	position: relative;
+	margin-bottom: 20px;
+}
+.grounp input{
+	line-height: 48px;
+	height: 48px;
+	background: #EDEDEE;
+	border: none;
+	outline: none;
+	text-align: right;
+	padding-right: 40px;
+	width: 400px;
+}
+.grounp label{
+	background: #EDE0C4;
+	line-height: 50px;
+	width: 130px;
+	display: inline-block;
+	text-align: center;
+}
+.grounp .timeimg {
+	top: 15px;
+}
+.foundbl{
+	background: #EDEDEE;
+	line-height: 50px;
+	width: 530px;
+	display: inline-block;
+	text-align: center;
+	border-radius: 30px;
+	color: #333;
+	font-size: 16px;
+}
+.blcont-right{
+	text-align: center;
+	padding: 0 20px 0 72px;
+	width: 476px;
+}
+.bigfont{
+	    font-size: 40px;
+    font-weight: bold;
+    color: #D4B36B;
+}
+.bigfont span{
+	font-size: 16px;
+	font-weight: 500;
+}
+.ml60{
+	margin-left: 67px;
+}
+.bl-title{
+	font-size: 23px;
+	border-bottom: 1px solid #DADADA;
+	padding-bottom: 10px;
+}
+.bl-title .more-a{
+	font-size: 16px;
+	margin-top: 10px;
+}
+.bllist{
+	height:456px;
+	width: 342px;
+	border: 1px solid #DADADA;
+	text-align: center;
+	float: left;
+	margin-right: 87px;
+	margin-bottom: 40px;
+}
+.bllist p{
+	margin-bottom: 20px;
+	color: #333;
+	font-size: 16px;
+}
+.bllist:hover{
+	border: 1px solid #D5B46B;
+}
+.cpimg{
+	width: 340px;
+	height: 280px;
+	margin-bottom: 20px;
+}
+.bl-btn{
+	display: block;
+    border: 1px solid #D5B46B;
+    width: 180px;
+    line-height: 40px;
+    margin: auto;
+    border-radius: 30px;
+    color: #D5B46B;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+.bl-btn:hover{
+	background: #D5B46B;
+	color: white;
+}
+ul .bllist:nth-of-type(3n){
+	margin-right: 0;
+}
+.bl-title span{
+	font-size: 14px;
+	color: #999;
+	margin-left: 30px;
+}
+.smallfont{
+	font-size: 18px;
+}
+.nlv-sp{
+    position: absolute;
+    left: 100px;
+    top: 5px;
+}
+.blxq .content-form2{
+	background: #EEEEEE;
+	width: 310px;
+	height: 40px;
+}
+.ml50{margin-left: 50px;}
+
+.blxq .form-grou label{
+	font-size: 16px;
+	width: 110px;
+}
+.blxq .timeimg{
+	top: 10px;
+}
+.rightbtn{
+	padding: 0 0 0 200px;
+	width: 600px;
+}
+.costP>span{
+	float: right;
+	margin-right: 90px;
+}
+.costP{
+	line-height: 35px;
+	font-size: 16px;
+}
+.costP>span>span{
+	color: #D5B46B;
+	font-size: 18px;
+}
+.hksm{
+	margin-right: 90px;
+	position: relative;
+	color: #0D377C;
+	display: block;
+	cursor: pointer;
+}
+.hksm>img{
+	margin-right: 6px;
+}
+.hktoggle{
+	position: absolute;
+	width: 199px;
+	color: #0D377C;
+	height: 38px;
+	line-height: 27px;
+	background: url(../images/blzx/hkshuoming_img.png);
+	text-align: center;
+  top: -35px;
+  left: -50px;
+  display: none;
+}
+.cx-btn{
+	display: block;
+	line-height: 40px;
+	background: #0D387D;
+	text-align: center;
+	color: white;
+	border-radius: 30px;
+	font-size: 16px;
+}
+.consultant{
+	margin: 40px 0;
+	border-bottom: 1px solid #DDDDDD;
+	border-top: 1px solid #DDDDDD;
+	padding: 20px 20px 20px 50px;
+	font-size: 16px;
+	line-height: 32px;
+}
+.consuright{
+	width: 1050px;
+}
+.navul{
+	border-bottom: 1px solid #DDDDDD;
+	line-height: 40px;
+	margin-bottom: 30px;
+}
+.navlist{
+	float: left;
+	width: 130px;
+	text-align: center;
+	cursor: pointer;
+}
+.nav_cur{
+	border-bottom: 2px solid #2E548F;
+}
+.dkxztitle{
+	font-size: 16px;
+}
+.application{
+	padding: 0 60px 0 40px;
+	line-height: 30px;
+}
+.claim{
+	font-weight: 600;
+}
+.application p{
+	margin-bottom: 0;
+}
+.applileft{
+	padding: 0 0 0 32px;
+}
+.w235{
+	width: 235px;
+}
+.dashedline{
+	border-bottom: 1px dashed #DDDDDD;
+}
+.successlist{
+	background: url(../images/blzx/blzx_rzcg_img.png) no-repeat;
+	line-height: 80px;
+	border-bottom: 1px solid #DDDDDD;
+	margin-bottom: 30px;
+}
+.successlist>span{
+	width: 33.3%;
+	display: inline-block;
+	
+}
+.successlist>span>span{
+	font-size: 26px;
+	font-weight: bold;
+	color: #D5B46B;
+}
+.successlist span:nth-child(1){
+	text-align: left;
+}
+.successlist span:nth-child(2){
+	text-align: center;
+}
+.successlist span:nth-child(3){
+	text-align: right;
+}
+.successtitle{
+	padding-left: 30px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.successul{
+	padding-left: 72px;
+	font-size: 16px;
+}
+.listtitle{
+	 font-size: 22px;
+}
+.bignum{
+	  font-size: 26px;
+    font-weight: bold;
+    color: #D5B46B;
+}
+.Companylist{
+	position: relative;
+	font-size: 16px;
+	border-bottom: 1px dashed #DDDDDD;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+}
+.Companylist img{
+	width: 200px;
+	height: 140px;
+	margin-right: 50px;
+}
+.Companylist>span{
+	display: inline-block;
+	width: 320px;
+	
+}
+.companubtn{
+	position: absolute;
+	right: 0;
+	width: 180px;
+	line-height: 40px;
+	border-radius: 20px;
+	text-align: center;
+	color: white;
+	background: #1958BC;
+	top: 47px;
+}
+.blsq .login_ul li input[type="text"], .login_ul li input[type="password"]{
+	width: 265px;
+	margin-left: 20px;
+}
+.blsq .getyzm{
+	width: 100px;
+}
+.centerp{
+	text-align: center;
+	line-height: 70px;
+	border-bottom: 1px solid #DDDDDD;
+	font-size: 16px;
+}
+.blsq .login_btn1{
+	font-size: 16px;
+}
+.blsq .login_ul{
+	padding: 0;
+	margin: auto;
+	float: none;
+	width: 355px;
+	margin-top: 50px;
+}

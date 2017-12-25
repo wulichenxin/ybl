@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+.pages{ height:40px; line-height:40px; padding:0px 20px; margin:20px 0px;}
+.pages_l{ float:left;}
+.pages_l select{ border:1px solid #dfe9f2; height:20px; line-height:20px; margin:0px 5px;}
+
+.pages_r{ float:right;}
+.pages_r ul li{ float:left; margin-right:5px;}
+.pages_r ul li a{ border:1px solid #dfe9f2; text-align:center; color:#666; padding:0px 10px; height:30px; line-height:30px; display:block;}
+.pages_r ul li a:hover{cursor:pointer; border:1px solid #11418D; text-align:center; color:#fff; background:#11418D; padding:0px 10px; height:30px; line-height:30px; display:block;}
+.pages_r ul li a.now{ border:1px solid #11418D; text-align:center; color:#fff; background:#11418D; padding:0px 10px; height:30px; line-height:30px; display:block;}

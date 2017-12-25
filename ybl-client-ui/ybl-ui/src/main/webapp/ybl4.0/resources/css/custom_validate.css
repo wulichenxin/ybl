@@ -1,0 +1,25 @@
+@CHARSET "UTF-8";
+
+em.error {
+  background:url("../images/onError.gif") no-repeat -4px -2px;
+  padding-left:16px;
+  color: red;
+  margin-left: 5px;
+}
+
+em.success {
+  margin-left: 5px;
+  background:url("../images/onSuccess.gif") no-repeat -4px -2px;
+}
+
+/*$("#changePwdForm").validate({
+	errorElement: "em", //可以用其他标签，记住把样式也对应修改
+	success: function(label) {
+		//label指向上面那个错误提示信息标签em
+		label.text(" ")        //清空错误提示消息
+		.addClass("success");  //加上自定义的success类
+	   },
+	highlight: function(element, errorClass) {
+		$(element).parent().find("." + errorClass).removeClass("success");//表单用户(获取到焦点)操作时如果正确就移除错误的css属性添加正确的css属性
+	}
+});*/

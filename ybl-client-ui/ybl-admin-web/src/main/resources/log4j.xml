@@ -1,0 +1,45 @@
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<appender name="console" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%d %-5p %c - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="fileInfo"
+		class="com.bpm.framework.utils.log.DailyRollingZipFileAppender">
+		<param name="File" value="../logs/admin-web.log" />
+		<param name="Append" value="true" />
+		<param name="Encoding" value="GBK" />
+		<param name="DatePattern" value="'.'yyyyMMdd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%d %-5p %c - %m%n" />
+		</layout>
+	</appender>
+	
+	<appender name="axis"
+		class="com.bpm.framework.utils.log.DailyRollingZipFileAppender">
+		<param name="File" value="../logs/admin-web-axis.log" />
+		<param name="Append" value="true" />
+		<param name="Encoding" value="GBK" />
+		<param name="DatePattern" value="'.'yyyyMMdd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="%d %-5p %c - %m%n" />
+		</layout>
+	</appender>
+	
+	<logger name="httpclient.wire" additivity="false">
+		<level value="DEBUG" />
+		<appender-ref ref="axis" />
+	</logger>
+	
+	<root>
+		<level value="INFO" />
+		<appender-ref ref="fileInfo" />
+		<appender-ref ref="console" />
+	</root>
+</log4j:configuration>

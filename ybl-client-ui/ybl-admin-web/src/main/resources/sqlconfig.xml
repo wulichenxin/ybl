@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SqlMap>
+	<sql key="fw.app.test" db="oracle" type="sql">
+		select * from grx_user o
+	</sql>
+</SqlMap>

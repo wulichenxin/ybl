@@ -1,0 +1,54 @@
+package com.myhexin;
+
+import com.myhexin.entity.Book;
+
+
+//默认售价为书的原价
+rule "default book price rule"
+    lock-on-active
+    salience 10
+    
+    when
+        b : Book()
+    then
+   		System.out.println("一般书籍");
+        b.setSalesPrice(b.getBasePrice());
+end
+
+//计算机类图书打95折
+rule "the clz of computer price rule 95% discount"
+    lock-on-active
+    salience 9
+    
+    when
+        b : Book( clz == "computer")
+    then
+    	System.out.println("计算机书籍");
+        b.setSalesPrice(b.getBasePrice()*0.95);
+end
+
+
+//销售区域是中国的话，在优惠的基础上再减两块钱
+rule "china area sales price rule"
+    salience 8
+    
+    when 
+        b : Book( salesArea == "China" )
+    then
+   		System.out.println("中国区书籍");
+        b.setSalesPrice(b.getSalesPrice()-2);
+        
+end
+
+
+//如果书的出版时间超过2年的话，售价在原价的基础上打8折, 与计算机类图书优惠不能同时享受
+rule "years 2+ rule"
+    salience 7
+    
+    when 
+        b : Book( years > 2 &&  clz != "computer")
+    then
+    	System.out.println("两年+计算机书籍");
+        b.setSalesPrice(b.getBasePrice()*0.8);
+end
+

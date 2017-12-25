@@ -1,0 +1,15 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.grx</groupId>
+	<artifactId>ybl-build</artifactId>
+	<version>1.0.00-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>ybl-build</name>
+	<url>http://www.grx888.com</url>
+	
+	<modules>
+		<module>../ybl-controller</module>
+		<module>../ybl-ui</module>
+		<module>../ybl-cache</module>
+	</modules>
+</project>

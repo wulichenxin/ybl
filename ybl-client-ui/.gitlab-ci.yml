@@ -1,0 +1,77 @@
+variables:
+  GIT_STRATEGY: fetch
+
+stages:
+  - build
+  - install
+  - analysis
+#  - deploy-jar
+  - publish-version
+  - deploy-zip
+  - deploy-doc
+
+build:
+  stage: build
+  script:
+    - mvn clean compile
+#  only:
+#    - master
+#    - /^.*-stable$/
+#    - tags
+    
+install:
+   stage: install
+   script:
+     - mvn versions:set -DnewVersion=$CI_BUILD_REF_NAME
+     - mvn clean install
+   artifacts:
+     paths:
+      - ybl-admin-web/target/*-war.war
+     expire_in: 10min
+   only:
+     - tags
+
+sonar analysis:
+  stage: analysis
+  only:
+    - master
+    - /^.*-stable$/
+    - tags
+  script:
+     - echo "sonar.... [TODO]"
+#     - mvn -e -B -U clean verify -Pmodules -Psonar
+#     - mvn -e -B -U -Pmodules org.codehaus.mojo:sonar-maven-plugin:3.0:sonar
+
+#deploy to nexus:
+#  stage: deploy-jar
+#  only:
+#    - tags
+#  script:
+#    - mvn versions:set -DnewVersion=$CI_BUILD_REF_NAME
+#    - mvn deploy -U
+#    - mvn versions:revert
+
+publish version:
+  stage: publish-version
+  script:
+    - /opt/jira-tools/change_jira_release_status.sh YBL V`echo $CI_BUILD_REF_NAME`
+  only:
+    - /^.*-RELEASE$/
+
+deploy to release site:
+  stage: deploy-zip
+  only:
+    - /^.*-RELEASE$/
+  script:
+    - /opt/release-tools/publish-to-release-sites.sh ybl-admin-web/target/*-war.war ybl-client-ui ybl-client-ui-$CI_BUILD_REF_NAME.war
+  dependencies:
+    - install
+
+deploy confluence documents:
+  stage: deploy-doc
+  only:
+    - /^.*-RELEASE$/
+  script:
+#    - /opt/confluence-tools/confluence_copy_pages.sh src-space src-title dst-space dst-parent-title
+    - /opt/confluence-tools/confluence_copy_pages.sh YF4B "云保理-`echo $CI_BUILD_REF_NAME | awk -F '.' '{print "V"$1"."$2".X-RELEASE"}'`-用户手册" SunEDSPWiki "云保理-用户手册"
+

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd" default-autowire="byName">
+	
+	<!--  <bean id="defaultAuthFilter" class="com.bpm.framework.controller.security.DefaultAuthFilter" />
+	<bean id="passwordAuthFilter" class="com.bpm.framework.controller.security.PasswordAuthFilter" />
+	<bean id="validationAuthFilter" class="com.bpm.framework.controller.security.ValidationAuthFilter" />-->
+	
+	<!-- 登陆验证管理器 -->
+	<!--  <bean id="authenticationManager" class="com.bpm.framework.controller.security.AuthenticationManager">
+		<property name="filterList">
+			<list>
+				<ref bean="defaultAuthFilter" />
+				<ref bean="passwordAuthFilter" />
+				<ref bean="validationAuthFilter" />
+			</list>
+		</property>
+	</bean> -->
+	
+	<!-- 性能监控 -->
+	<bean id="timerMonitor" class="com.bpm.framework.console.performance.TimerMonitor" />
+	<aop:config>
+		<aop:pointcut id="around"
+			expression="execution(* com.bpm..*Service.*(..)) 
+								or execution(* com.grx..*Service.*(..))
+								or execution(* org.snaker.engine.core..*.*(..))" />
+		<aop:aspect ref="timerMonitor">
+			<aop:around method="around" pointcut-ref="around" />
+		</aop:aspect>
+	</aop:config>
+	
+</beans>
