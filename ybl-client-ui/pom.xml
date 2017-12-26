@@ -7,18 +7,18 @@
 	<name>ybl-client-build-parent</name>
 	<url>http://www.grx888.com</url>
 	
-	<modules>
-		<module>ybl-build</module>
-		<module>ybl-admin-web</module>
+	<modules>11
+		<module>ybl-build</module>22
+		<module>ybl-admin-web</module>33
 	</modules>
-	<modules>
-		<module>ybl-build</module>
-		<module>ybl-admin-web</module>
-	<modules>
-		<module>ybl-build</module>
-		<module>ybl-admin-web</module>
+	<modules>22
+		<module>ybl-build</module>22
+		<module>ybl-admin-web</module>33
+	<modules>33
+		<module>ybl-build</module>22
+		<module>ybl-admin-web</module>33
 	</modules>
-
+44
 	</modules> 
 
 </project>
