@@ -11,4 +11,12 @@
 		<module>ybl-build</module>
 		<module>ybl-admin-web</module>
 	</modules>
+	<modules>
+		<module>ybl-build</module>
+		<module>ybl-admin-web</module>
+	</modules>
+	<modules>
+		<module>ybl-build</module>
+		<module>ybl-admin-web</module>
+	</modules>
 </project>
